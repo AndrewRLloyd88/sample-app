@@ -37,4 +37,13 @@ module ApplicationHelper
   puts s.split('').shuffle.join
  end
 
+ # Returns a hash including a name email and random generated password
+ def my_hash
+  {
+    name: "John",
+    email: "johndoe@gmail.com",
+    password: ('a'..'z').to_a.sample(16).join
+  }
+ end
+
 end
